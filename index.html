@@ -30,47 +30,80 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
+						<a class="nav-link" id="navInfo" href="#">Sobre Nós</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="navContactos" href="#">Contactos</a>
+					</li>
+					<li class="nav-item">
 						<a class="nav-link" id="navMap" href="#">Localização</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Contactos</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Imprima as suas fotos</a>
 					</li>
 				</ul>
 			</nav>
-			<div class="container">
+			<div class="container" id="Home">
 				<div class="row">
-					<div class="col" id="HOME">
+					<div class="col">
 						
 					</div>
 				</div>
-				<div class="row">
-					<div class="col" id="AA">
+				<div class="row" id="Contactos">
+					<div class="col">
+						<h1>Contactos</h1>
+						<p>Telefone: 238 049 </p>
+						<p>Telemovel: 967 991 543 </p>
+						<p>Email: photuseretratus@gmail.com</p>
+						<p>Morada: Porta 2A, Rua Doutor Adelino Júnior Mendes Abreu, 3400-136 Oliveira do Hospital </p>
+					</div>
+					<div class="col">
+						<h1>Fale connosco</h1>
+						<form action="https://submit-form.com/cNbbnnMyrWBDZtr-jBBmW" target="_self">
+							<div class="form-group">
+								<select id="formType" class="form-control">
+									<option hidden disabled selected value>Escolha</option>
+									<option value="message">Enviar mensagem</option>
+									<option value="print">Enviar fotografias</option>
+									<option value="schedule">Marcar encontro</option>
+								</select>
+							</div>
+							<div id="nomeGroup" class="form-group">
+								<label for="name">Nome</label>
+								<input type="text" class="form-control" id="name" placeholder="O seu nome">
+							</div>
+							<div id="contacts" class="form-row">
+								<div class="col">
+									<label for="telephone">Telemovel</label>
+									<input type="text" class="form-control" id="telephone" placeholder="O seu numero de telemovel">
+								</div>
+								<div class="col">
+									<label for="email">Email</label>
+									<input type="text" class="form-control" id="email" placeholder="O seu email">
+								</div>
+							</div>
+							<div id="message" style="display:none">
+								<div class="form-group">
+									<label for="subject">Assunto</label>
+									<input type="text" class="form-control" id="subject" placeholder="Assunto">
+								</div>
+								
+								<div class="form-group">
+									<label for="messageCorp">Mensagem</label>
+									<textarea class="form-control" id="messageCorp" rows="5" style="resize:none"></textarea>
+								</div>
+							</div>
+							<div id="print" class="form-group">
+							</div>
+							<div id="schedule" class="form-group">
+							</div>
+							<div id="submit" class="form-group" style="display:none">
+								<button class="btn btn-primary" type="submit">Submeter</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="row" id="Map">
+					<div class="col">
 						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12160.748391769901!2d-7.8559553!3d40.3603756!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf3bf40b45ee127d7!2sPhotus%26Retratus!5e0!3m2!1spt-PT!2spt!4v1595344808189!5m2!1spt-PT!2spt" frameborder="1" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col" id="AA">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12160.748391769901!2d-7.8559553!3d40.3603756!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf3bf40b45ee127d7!2sPhotus%26Retratus!5e0!3m2!1spt-PT!2spt!4v1595344808189!5m2!1spt-PT!2spt" frameborder="1" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col" id="AA">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12160.748391769901!2d-7.8559553!3d40.3603756!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf3bf40b45ee127d7!2sPhotus%26Retratus!5e0!3m2!1spt-PT!2spt!4v1595344808189!5m2!1spt-PT!2spt" frameborder="1" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col" id="AA">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12160.748391769901!2d-7.8559553!3d40.3603756!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf3bf40b45ee127d7!2sPhotus%26Retratus!5e0!3m2!1spt-PT!2spt!4v1595344808189!5m2!1spt-PT!2spt" frameborder="1" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col" id="MAP">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12160.748391769901!2d-7.8559553!3d40.3603756!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf3bf40b45ee127d7!2sPhotus%26Retratus!5e0!3m2!1spt-PT!2spt!4v1595344808189!5m2!1spt-PT!2spt" frameborder="1" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-					</div>
-				</div>
-			</div>
-		</body>
-	</html>					
+			</body>
+		</html>															
