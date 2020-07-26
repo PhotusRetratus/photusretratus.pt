@@ -10,20 +10,20 @@ $(function(){
 	
 	$("#formType").change(function(){
 		switch($("#formType option:selected").val()){
-			case "message":
-			$("#print").hide();
-			$("#schedule").hide();
+			case "Message":
+			$("#formPrint").hide();
+			$("#formSchedule").hide();
 			break;
-			case "print":
-			$("#message").hide();
-			$("#schedule").hide();
+			case "Print":
+			$("#formMessage").hide();
+			$("#formSchedule").hide();
 			break;
-			case "schedule":
-			$("#message").hide();
-			$("#print").hide();
+			case "Schedule":
+			$("#formMessage").hide();
+			$("#formPrint").hide();
 			break;
 		}
-		$("#"+$("#formType option:selected").val()).show();
+		$("#form"+$("#formType option:selected").val()).show();
 	});
 	
 	$("#fileSubmission").change(function(){

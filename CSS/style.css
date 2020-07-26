@@ -1,8 +1,20 @@
 iframe{
 	width:100%;
-	height:450px;
+	height:100%;
 }
 
 .container{
 	max-width:95% !important;
+}
+
+#Contacts li{
+	width:94%;
+}
+
+#Contacts li:first-child{
+	width:6%;
+}
+
+.row{
+	margin-top:2%;
 }
