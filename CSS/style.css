@@ -8,11 +8,11 @@ iframe{
 }
 
 #Contacts li{
-	width:94%;
+	width:90%;
 }
 
 #Contacts li:first-child{
-	width:6%;
+	width:10%;
 }
 
 .row{
