@@ -65,11 +65,6 @@
 						<li class="list-group-item"><i class="fa fa-map-marker" aria-hidden="true"></i></li>
 						<li class="list-group-item">Rua Doutor Adelino Júnior Mendes Abreu 2A, Oliveira do Hospital </li>
 					</ul>
-					<!---<div class="fb-page" data-href="https://www.facebook.com/Photusretratus/" data-tabs="" data-width="500" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
-						<blockquote cite="https://www.facebook.com/Photusretratus/" class="fb-xfbml-parse-ignore">
-						<a href="https://www.facebook.com/Photusretratus/">photus&amp;retratus</a>
-						</blockquote>
-					</div>-->
 				</div>
 				<div class="col" id="Map">
 					<h1>Econtre-nos</h1>
@@ -82,7 +77,7 @@
 					<form id="contactForm" method="POST" name="form" action="PHP/form.php" enctype="multipart/form-data">
 						<div class="form-group">
 							<select name="formType" id="formType" class="form-control">
-								<option hidden disabled selected value>Escolha</option>
+								<option hidden disabled selected value>Escolha o tema de contacto</option>
 								<option value="Message">Enviar mensagem</option>
 								<option value="Print">Enviar fotografias</option>
 								<option value="Schedule">Marcar reunião</option>
@@ -136,8 +131,10 @@
 								</div>
 							</div>
 						</div>
+						<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+						<input type="hidden" name="action" value="validate_captcha">
 						<div id="submit" class="form-group">
-							<input id="submitbutton" type="submit" name="submit" class="btn btn-primary" type="submit"/>
+							<button type="submit" class="btn btn-primary">Submit</button>
 						</div>
 					</form>
 				</div>

@@ -30,14 +30,12 @@
 		if ($response->success === false) {
 			echo "nay";
 		}
-		else
-		{
-			echo "yay";
-			if ($response->success==true && $response->score <= 0.5) {
-				//Do something to denied access
-			}
-		}
+	
 	}
+	
+	if ($response->success==true && $response->score <= 0.5) {
+    //Do something to denied access
+}
 	
 	
 	/*
