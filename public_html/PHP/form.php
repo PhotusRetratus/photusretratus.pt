@@ -2,8 +2,10 @@
 	
 	echo "yo";
 	use PHPMailer\PHPMailer\PHPMailer;
-	use PHPMailer\PHPMailer\Exception;
-	require 'C:\php\vendor\autoload.php';
+	include_once "PHPMailer/PHPMailer.php";
+	include_once "PHPMailer/Exception.php";
+	include_once "PHPMailer/SMTP.php";
+	echo "yo2";
 	
 	$mail = new PHPMailer(TRUE);
 	
@@ -12,7 +14,7 @@
 	$response = file_get_contents($url);
 	$responseKeys = json_decode($response, true);
 	
-	echo "yo";
+	echo "yo3";
 	
 	if ($responseKeys["success"] && $responseKeys["action"] == 'contactForm') {
             if ($responseKeys["score"] >= 0.5) {
@@ -35,7 +37,7 @@
 }
 	
 	
-	/*
+	
 		try {
 		
 		$mail->isSMTP();
@@ -71,5 +73,5 @@
 		catch (\Exception $e)
 		{
 		echo $e->getMessage();
-	}*/
+	}
 ?>
