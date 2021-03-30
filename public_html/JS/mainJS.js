@@ -1,6 +1,7 @@
 $(function(){	
 	
 	$("#contactForm").submit(function(e){
+	alert("as");
         e.preventDefault();
 		grecaptcha.ready(function() {
 			grecaptcha.execute('6LfmF8AZAAAAAFNT2ytbglM2hGpeJif1CmZgZZXm', {action:'validate_captcha'}).then(function(token) {
