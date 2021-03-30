@@ -3,9 +3,9 @@ $(function(){
 	$("#contactForm").submit(function(e){
         e.preventDefault();
 		grecaptcha.ready(function() {
-			grecaptcha.execute('6LfmF8AZAAAAAFNT2ytbglM2hGpeJif1CmZgZZXm', {action:'validate_captcha'}).then(function(token) {
+			grecaptcha.execute('6LfmF8AZAAAAAFNT2ytbglM2hGpeJif1CmZgZZXm', {action:'contactForm'}).then(function(token) {
 				$("#g-recaptcha-response").value = token;
-				alert(token);
+				$("#contactForm").submit;
 			});
 		});
 	});
