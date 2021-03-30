@@ -2,9 +2,7 @@
 	
 	echo "yo";
 	use PHPMailer\PHPMailer\PHPMailer;
-	include_once "PHPMailer/PHPMailer.php";
-	include_once "PHPMailer/Exception.php";
-	include_once "PHPMailer/SMTP.php";
+	use PHPMailer\PHPMailer\Exception;
 	
 	$mail = new PHPMailer(TRUE);
 	
