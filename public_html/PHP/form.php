@@ -1,25 +1,19 @@
 <?php
 	
-	echo "yo";
 	use PHPMailer\PHPMailer\PHPMailer;
 	use PHPMailer\PHPMailer\SMTP;
 	use PHPMailer\PHPMailer\Exception;
 	
 	require_once "../../vendor/autoload.php";
 	
-	echo "yo2";
-	
 	$ip = $_SERVER['REMOTE_ADDR'];
 	$captchaURL = "https://www.google.com/recaptcha/api/siteverify?secret=6LfmF8AZAAAAAF284CXnmOJzsaZ8hZ-e9TQfHHIz";
 	$response = file_get_contents($url);
 	$responseKeys = json_decode($response, true);
 	
-	echo "yo3";
-	
 	if ($responseKeys["success"] && $responseKeys["action"] == 'contactForm') {
             if ($responseKeys["score"] >= 0.5) {
-                //send email with contact form submission data to site owner/ submit to database/ etc
-                //redirect to confirmation page or whatever you need to do
+                echo "yay";
             } elseif ($responseKeys["score"] < $g_recaptcha_allowable_score) {
                 //failed spam test. Offer the visitor the option to try again or use an alternative method of contact.
             }
