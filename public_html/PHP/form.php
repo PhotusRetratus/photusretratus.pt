@@ -13,9 +13,9 @@
 		
 		$response = json_decode($response);
 		
-		echo $response->success;
+		echo $response;
 		
-		if ($response->success == false) {
+		if ($response->success === false) {
 			echo "nay";
 		}
 		else{
