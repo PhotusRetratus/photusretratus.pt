@@ -1,6 +1,7 @@
 $(function(){	
 	
-	contactForm.addEventListener('submit', event => {
+	$('#contactForm').on('submit', function () {
+		alert('Form submitted!');
 		e.preventDefault();
 		grecaptcha.ready(function() {
 			grecaptcha.execute('6LfmF8AZAAAAAFNT2ytbglM2hGpeJif1CmZgZZXm', {action:'submit'}).then(function(token) {

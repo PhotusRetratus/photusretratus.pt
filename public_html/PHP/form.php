@@ -11,7 +11,6 @@
 	$response = file_get_contents($url);
 	$responseKeys = json_decode($response, true);
 
-	echo "oi";
 	
 	if ($responseKeys["success"] && $responseKeys["action"] == 'contactForm') {
 	echo "yo";
