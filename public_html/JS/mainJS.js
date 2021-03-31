@@ -7,6 +7,7 @@ $(function(){
 				$("#g-recaptcha-response").value = token;
 			});
 		});
+		$("#g-recaptcha-response").value
 	});
 	
 	
