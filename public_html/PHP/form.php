@@ -9,11 +9,11 @@
 	
 	echo "yo2";
 	
-	/*$ip = $_SERVER['REMOTE_ADDR'];
+	$ip = $_SERVER['REMOTE_ADDR'];
 	$captchaURL = "https://www.google.com/recaptcha/api/siteverify?secret=6LfmF8AZAAAAAF284CXnmOJzsaZ8hZ-e9TQfHHIz";
 	$response = file_get_contents($url);
 	$responseKeys = json_decode($response, true);
-	*/
+	
 	echo "yo3";
 	
 	if ($responseKeys["success"] && $responseKeys["action"] == 'contactForm') {
@@ -36,7 +36,7 @@
     //Do something to denied access
 }
 	
-	/*
+	
 	
 		try {
 		
@@ -73,5 +73,5 @@
 		catch (\Exception $e)
 		{
 		echo $e->getMessage();
-	}*/
+	}
 ?>
