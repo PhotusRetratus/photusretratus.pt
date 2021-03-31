@@ -10,12 +10,15 @@
 	if (isset($_POST['g-recaptcha-response'])) {
 		
 		$captcha = $_POST['g-recaptcha-response'];
-		echo $_POST['g-recaptcha-response'];
+		echo $captcha;
 		$ip = $_SERVER['REMOTE_ADDR'];
-		$secret = '6LfmF8AZAAAAAF284CXnmOJzsaZ8hZ-e9TQfHHIz';
+		echo $ip;
+		$secret = "6LfmF8AZAAAAAF284CXnmOJzsaZ8hZ-e9TQfHHIz";
 		$response = file_get_contents(
         "https://www.google.com/recaptcha/api/siteverify?secret=" . $secret . "&response=" . $captcha . "&remoteip=" . $ip);
 		$response = json_decode($response);
+		
+		echo $response;
 		
 		if ($response->success === false) {
 			echo "nay";
