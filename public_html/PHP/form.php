@@ -12,7 +12,6 @@
 		$response = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secret."&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']));
 
 		echo $captcha;
-		echo ['g-recaptcha-response'];
 		
 		$response = json_decode($response);
 		
