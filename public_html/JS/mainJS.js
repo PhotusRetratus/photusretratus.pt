@@ -1,7 +1,8 @@
 $(function(){	
 	
 	contactForm.addEventListener('submit', event => {
-        e.preventDefault();
+        alert("0");
+		e.preventDefault();
 		alert("1");
 		grecaptcha.ready(function() {
 		alert("2");
