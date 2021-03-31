@@ -6,11 +6,17 @@
 	
 	require_once "../../vendor/autoload.php";
 	
-	$ip = $_SERVER['REMOTE_ADDR'];
 	$captchaURL = "https://www.google.com/recaptcha/api/siteverify?secret=6LfmF8AZAAAAAF284CXnmOJzsaZ8hZ-e9TQfHHIz";
 	$response = file_get_contents($url);
 	$responseKeys = json_decode($response, true);
 
+	if (isset($_POST['g-recaptcha-response'])) {
+		$captcha = $_POST['g-recaptcha-response'];
+		echo "yay";
+	} else {
+		$captcha = false;
+		echo "yay2";
+	}
 	
 	if ($responseKeys["success"] && $responseKeys["action"] == 'contactForm') {
 	echo "yo";
