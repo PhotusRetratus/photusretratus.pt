@@ -10,6 +10,7 @@
 	if (isset($_POST['g-recaptcha-response'])) {
 		
 		$captcha = $_POST['g-recaptcha-response'];
+		echo $_POST['g-recaptcha-response'];
 		$ip = $_SERVER['REMOTE_ADDR'];
 		$secret = '6LfmF8AZAAAAAF284CXnmOJzsaZ8hZ-e9TQfHHIz';
 		$response = file_get_contents(
