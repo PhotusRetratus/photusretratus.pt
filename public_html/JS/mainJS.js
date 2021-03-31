@@ -1,16 +1,10 @@
 $(function(){	
 	
 	contactForm.addEventListener('submit', event => {
-        alert("0");
 		e.preventDefault();
-		alert("1");
 		grecaptcha.ready(function() {
-		alert("2");
-			grecaptcha.execute('6LfmF8AZAAAAAFNT2ytbglM2hGpeJif1CmZgZZXm', {action:'contactForm'}).then(function(token) {
-				alert("3");
+			grecaptcha.execute('6LfmF8AZAAAAAFNT2ytbglM2hGpeJif1CmZgZZXm', {action:'submit'}).then(function(token) {
 				$("#g-recaptcha-response").value = token;
-				contactForm.submit();
-				alert("4");
 			});
 		});
 	});
