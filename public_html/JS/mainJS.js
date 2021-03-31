@@ -1,13 +1,10 @@
 $(function(){	
 	
-	function captcha(){
-		alert("yo");
-		grecaptcha.ready(function() {
-			grecaptcha.execute('6LfmF8AZAAAAAFNT2ytbglM2hGpeJif1CmZgZZXm', {action:'submit'}).then(function(token) {
-				$("#g-recaptcha-response").value = token;
-			});
+	grecaptcha.ready(function() {
+		grecaptcha.execute('6LfmF8AZAAAAAFNT2ytbglM2hGpeJif1CmZgZZXm', {action:'submit'}).then(function(token) {
+			$("#g-recaptcha-response").value = token;
 		});
-	};
+	});
 	
 	
 	$(".nav-link").click(function(){
