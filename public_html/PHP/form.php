@@ -5,9 +5,9 @@
 	use PHPMailer\PHPMailer\SMTP;
 	use PHPMailer\PHPMailer\Exception;
 	
-	/*
+	
 	require_once "vendor/autoload.php";
-	*/
+	
 	
 	echo "yo2";
 	
