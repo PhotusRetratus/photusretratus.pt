@@ -40,7 +40,7 @@
 					
 					$mail->setFrom = $_POST['email'];
 					
-					echo = $_POST['email'];
+					echo $_POST['email'];
 					
 					$mail->addAddress('diogoah99@gmail.com');
 					
