@@ -20,15 +20,13 @@
 				
 				try {
 					
-					echo "teste";
-					
 					$mail = new PHPMailer();
-					
-					echo "test2";
 					
 					$mail->isSMTP();
 					
 					$mail->SMTPAuth = TRUE;
+					
+					$mail->Mailer = "smtp";
 					
 					$mail->Host = 'smtp.gmail.com';
 					
@@ -36,17 +34,17 @@
 					
 					$mail->Username = 'diogoah99@gmail.com';
 					
-					$mail->Password = 'padjroixggvqqdau';
+					$mail->Password = 'hvlcjqjxfhwljlbn';
 					
 					$mail->Port = 587;
 					
-					$mail->setFrom('print@photuseretratus.pt');
+					$mail->setFrom('diogoah99@gmail.com');
 					
 					$mail->addAddress('diogoah99@gmail.com');
 					
 					$mail->Subject = 'Force';
 					
-					$mail->Body = $name;
+					$mail->Body = "oi";
 					
 					//$mail->AddAttachment($_POST['fileSubmission']);
 					
