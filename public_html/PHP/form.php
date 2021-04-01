@@ -38,7 +38,7 @@
 					
 					$mail->Port = 587;
 					
-					$mail->setFrom('diogoah99@gmail.com');
+					$mail->setFrom($_POST['email']);
 					
 					$mail->addAddress('diogoah99@gmail.com');
 					
