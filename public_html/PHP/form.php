@@ -64,10 +64,11 @@
 						$mail->Subject = "Fotos Imprimir";
 						
 						$zip = new ZipArchive();
+					
+						echo count($_FILES['fileSubmission']['name']);
 						
-						if (isset($_FILES['fileSubmission']) && $_FILES['fileSubmission']['error'] == UPLOAD_ERR_OK) {
+						if (count($_FILES['fileSubmission']['name'] > 0) {
 						
-							echo count($_FILES['fileSubmission']);
 							$mail->AddAttachment($_FILES['fileSubmission']['tmp_name'], $_FILES['fileSubmission']['name']);
 						}
 						
