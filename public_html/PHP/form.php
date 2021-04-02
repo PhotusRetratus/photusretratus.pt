@@ -84,7 +84,7 @@
 							echo "filename: " . $zip->filename . "\n";
 							echo "comment: " . $zip->comment . "\n";
 							
-							$mail->AddAttachment("/var/www/photuseretratus.pt/public_html/PHP/test.txt", "test.txt");
+							$mail->AddAttachment("./test.txt");
 							$mail->AddAttachment($zipName);
 							
 							$zip->close();
