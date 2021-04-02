@@ -65,14 +65,11 @@
 						
 						$zip = new ZipArchive();
 						
-						foreach($_FILES['fileSubmission']['name'] )
-						{
-							echo "yay";
-						}
-						
-						if (count($_FILES['fileSubmission']['name'] > 0) {
+						if (isset($_FILES['fileSubmission']['tmp_name'])) {
 							
-							$mail->AddAttachment($_FILES['fileSubmission']['tmp_name'], $_FILES['fileSubmission']['name']);
+							echo "yay";
+							echo count($_FILES['file']['tmp_name']);
+							$mail->AddAttachment($_FILES['fileSubmission']['tmp_name'][0], $_FILES['fileSubmission']['name'][0]);
 						}
 						
 					}
