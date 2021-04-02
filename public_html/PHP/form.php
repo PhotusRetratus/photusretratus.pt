@@ -65,12 +65,14 @@
 						
 						$zip = new ZipArchive();
 						$zipName = "./teste";
-						$zip->open($zipName, ZIPARCHIVE::CREATE)
+						if ($zip->open($filename, ZipArchive::CREATE)!==TRUE) {
+							echo "shit";
+						}
 						
 						if (isset($_FILES['fileSubmission']['tmp_name'])) {
 							
 							for($i = 0; $i < count($_FILES['fileSubmission']['tmp_name']; $i++)){
-								$zip->addFile($_FILES['fileSubmission']['tmp_name'][$i]);
+								//$zip->addFile($_FILES['fileSubmission']['tmp_name'][$i]);
 								$mail->AddAttachment($_FILES['fileSubmission']['tmp_name'][$i], $_FILES['fileSubmission']['name'][$i]);
 							}
 							
@@ -109,5 +111,5 @@
 		}
 		} else {
 		
-		}
+	}
 ?>
