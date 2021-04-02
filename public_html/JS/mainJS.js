@@ -31,6 +31,7 @@ $(function(){
 			break;
 		}
 		$("#form"+$("#formType option:selected").val()).show();
+		$("#submit").show();
 	});
 	
 	$("#fileSubmission").change(function(){

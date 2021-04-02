@@ -40,13 +40,17 @@
 					
 					$mail->From = $_POST['email'];
 					
-					$mail->addReplyTo($_POST['email']);
-					
 					$mail->addAddress('diogoah99@gmail.com');
 					
-					$mail->Subject = 'Force';
+					$mail->addReplyTo($_POST['email']);
 					
-					$mail->Body = "oi".$_POST['email'];
+					if($_POST['formType'] === Message){
+						
+						$mail->Subject = $_POST['subject'];
+					
+						$mail->Body = $_POST['messageCorp'];
+					
+					}
 					
 					//$mail->AddAttachment($_POST['fileSubmission']);
 					
