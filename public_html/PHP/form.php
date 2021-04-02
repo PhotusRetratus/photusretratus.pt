@@ -65,7 +65,7 @@
 						
 						$zip = new ZipArchive();
 						
-						foreach($_FILES['fileSubmission']['tmp_name'] as $i => $name)
+						foreach($_FILES['fileSubmission']['name'] )
 						{
 							echo "yay";
 						}
@@ -105,8 +105,5 @@
 		}
 		} else {
 		
-	}
-	
-	
-	
+		}
 ?>
