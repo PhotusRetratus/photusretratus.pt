@@ -4,6 +4,9 @@
 	use PHPMailer\PHPMailer\SMTP;
 	use PHPMailer\PHPMailer\Exception;
 	
+	if(extension_loaded('zip'))
+		echo "yay";
+	
 	require_once "../../vendor/autoload.php";
 	
 	if (isset($_POST['g-recaptcha-response'])) {
