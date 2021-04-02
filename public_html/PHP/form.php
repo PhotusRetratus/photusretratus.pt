@@ -40,7 +40,7 @@
 					
 					$mail->From = $_POST['email'];
 					
-					$mail->addAddress($_POST['email']);
+					$mail->addAddress('diogoah99@gmail.com');
 					
 					$mail->addReplyTo($_POST['email']);
 					
@@ -50,7 +50,11 @@
 						
 						$mail->Subject = $_POST['subject'];
 					
-						$mail->Body = $_POST['messageCorp'];
+						$mail->Body = 
+						"Nome: " .$_POST['name'] .
+						"/n Telemóvel: " . $_POST['telephone'] . 
+						"/n Email: " . $_POST['email'] .
+						"/n Message:/n" . $_POST['messageCorp'];
 					
 					}
 					
