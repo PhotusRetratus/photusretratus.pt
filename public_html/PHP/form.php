@@ -67,7 +67,7 @@
 						
 						if (isset($_FILES['fileSubmission']) && $_FILES['fileSubmission']['error'] == UPLOAD_ERR_OK) {
 						
-							echo count($_FILES['fileSubmission']['tmp_name']);
+							echo count($_FILES['fileSubmission']);
 							$mail->AddAttachment($_FILES['fileSubmission']['tmp_name'], $_FILES['fileSubmission']['name']);
 						}
 						
