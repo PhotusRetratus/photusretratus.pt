@@ -64,23 +64,29 @@
 						$mail->Subject = "Fotos Imprimir";
 						
 						$zip = new ZipArchive();
-						$zipName = "./teste.zip";
+						$zipName = "teste.zip";
 						
 						if ($zip->open($zipName, ZipArchive::CREATE)!==TRUE) {
 							echo "Error creating zip";
 						}
 						
 						if (isset($_FILES['fileSubmission']['tmp_name'])) {
-						
+							
 							
 							for($i = 0; $i < count($_FILES['fileSubmission']['tmp_name']); $i++){
 								$zip->addFile($_FILES['fileSubmission']['tmp_name'][$i]);
 								$mail->AddAttachment($_FILES['fileSubmission']['tmp_name'][$i], $_FILES['fileSubmission']['name'][$i]);
 							}
 							
+							echo "numFiles: " . $zip->numFiles . "\n";
+							echo "status: " . $zip->status  . "\n";
+							echo "statusSys: " . $zip->statusSys . "\n";
+							echo "filename: " . $zip->filename . "\n";
+							echo "comment: " . $zip->comment . "\n";
+							
 							$zip->close();
 							
-							$mail->AddAttachment($zip);
+							$mail->AddAttachment($zipName);
 						}
 						
 					}
