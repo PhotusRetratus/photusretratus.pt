@@ -66,11 +66,13 @@
 						$zip = new ZipArchive();
 						$zipName = "teste.zip";
 						
-						if ($zip->open($filename, ZipArchive::CREATE)!==TRUE) {
-							echo "shit";
+						if ($zip->open($zipName, ZipArchive::CREATE)!==TRUE) {
+							echo "no";
 						}
 						
 						if (isset($_FILES['fileSubmission']['tmp_name'])) {
+							
+							echo "Yay";
 							
 							for($i = 0; $i < count($_FILES['fileSubmission']['tmp_name']); $i++){
 								$zip->addFile($_FILES['fileSubmission']['tmp_name'][$i]);
