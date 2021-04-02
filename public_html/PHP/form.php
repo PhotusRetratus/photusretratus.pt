@@ -80,7 +80,7 @@
 							
 							$zip->close();
 							
-							$mail->addAttachment($zipName);
+							$mail->AddAttachment($zipName);
 						}
 						
 					}
