@@ -53,6 +53,7 @@
 						"\n Telemóvel: " . $_POST['telephone'] . 
 						"\n Email: " . $_POST['email'] .
 						"\n Message:\n" . $_POST['messageCorp'];
+						echo "message";
 					
 					}elseif($_POST['formType'] === "Print"){
 						
@@ -62,10 +63,12 @@
 						"Nome: " .$_POST['name'] .
 						"\n Telemóvel: " . $_POST['telephone'] . 
 						"\n Email: " . $_POST['email'];
+						
+						$mail->AddAttachment($_POST['fileSubmission']);
 					
+						echo "print";
 					}
 					
-					$mail->AddAttachment($_POST['fileSubmission']);
 					
 					$mail->send();
 				}
