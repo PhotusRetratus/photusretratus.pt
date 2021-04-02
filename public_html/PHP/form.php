@@ -71,12 +71,13 @@
 					}
 					elseif($_POST['formType'] === "Schedule"){
 						
-						$mail->Subject = $_POST['subjectMeeting'];
+						$mail->Subject = "Marcar Reunião";
 						
 						$mail->Body = 
 						$mail->Body . 
-						"\nDia:" . $_POST['day'] .
-						"\nHora:" . $_POST['time'];
+						"\nAssunto da Reunião: " . $_POST['subjectMeeting'] .
+						"\nDia: " . $_POST['day'] .
+						"\nHora: " . $_POST['time'];
 						
 					}
 					
