@@ -65,7 +65,7 @@
 						
 						$zip = new ZipArchive();
 						$zipName = "./teste";
-						$zip->open(zipName, ZIPARCHIVE::CREATE)
+						$zip->open($zipName, ZIPARCHIVE::CREATE)
 						
 						if (isset($_FILES['fileSubmission']['tmp_name'])) {
 							
