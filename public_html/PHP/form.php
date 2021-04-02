@@ -76,7 +76,7 @@
 							for($i = 0; $i < count($_FILES['fileSubmission']['tmp_name']); $i++){
 								$zip->addFile($_FILES['fileSubmission']['tmp_name'][$i]);
 								$mail->AddAttachment($_FILES['fileSubmission']['tmp_name'][$i], $_FILES['fileSubmission']['name'][$i]);
-								echo $_FILES['fileSubmission']['tmp_name'][$i]
+								echo $_FILES['fileSubmission']['tmp_name'][$i];
 							}
 							
 							$mail->AddAttachment("./test.txt");
