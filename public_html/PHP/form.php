@@ -44,7 +44,7 @@
 					
 					$mail->addReplyTo($_POST['email']);
 					
-					if($_POST['formType'] === Message){
+					if($_POST['formType'] === "Message"){
 						
 						$mail->Subject = $_POST['subject'];
 					
@@ -54,9 +54,9 @@
 						"\n Email: " . $_POST['email'] .
 						"\n Message:\n" . $_POST['messageCorp'];
 					
-					}else if($_POST['formType'] === Print){
+					}elseif($_POST['formType'] === "Print"){
 						
-						$mail->Subject = $_POST['subject'];
+						$mail->Subject = "Fotos Imprimir";
 						
 						$mail->Body = 
 						"Nome: " .$_POST['name'] .
@@ -64,7 +64,6 @@
 						"\n Email: " . $_POST['email'];
 					
 					}
-					
 					
 					$mail->AddAttachment($_POST['fileSubmission']);
 					
