@@ -9,4 +9,25 @@ iframe{
 
 .row{
 	margin-top:2%;
+	padding-top:1%;
+}
+
+#Info{
+	margin-top:5%;
+	color:white;
+}
+
+#Info > div > img{
+	width:25% !important;
+	position:inherit;
+	bottom:25%;
+}
+
+#email, #phone, #smartphone{
+	background-color: #3d97db;
+	margin: 0% 3%;
+}
+
+#map{
+	position:inherit;
 }
