@@ -1,13 +1,76 @@
 @import "../bootstrap/scss/bootstrap";
 
-.body{
-    background-color: $cyan-900;
+#mainNav{
+    a{
+        color:white;
+    }
+
+    button{
+        color: white;
+    }
+
+    .active{
+        border-bottom: 3px solid #2e4b70;
+        font-weight: 200;
+    }
 }
 
-footer{
-    background-color: $cyan-900;
+#About{
+    @media (min-width:992px) {
+        #textCol{
+            border-left: 5px solid #2e4b70;
+        }
+    }
+    
 }
 
-.navbar{
-    background-color: $blue-700;
+#Projects{
+    img{
+        max-width: 100%;
+    }
 }
+
+#masthead {
+    /*display: flex;
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 35rem;
+    padding: 15rem 0;
+    background: url("../assets/header.jpg"); //linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%, #000 100%), url("../assets/header.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 100%;
+    */
+    img{
+        max-width: 100%;
+    }
+    
+  }
+
+  section{
+      padding: 3rem;
+  }
+
+  #Contact{
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 35rem;
+    padding: 15rem 0;
+    background: url("../assets/header.jpg"); //linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%, #000 100%), url("../assets/header.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+   
+    span{
+        font-size: 1em;
+        color: $indigo-300;
+    }
+
+    .card{
+        border-bottom: 3px solid $indigo-300;
+    }
+  }
