@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    import ImageKit from "imagekit-javascript"
+
     var imagekit = new ImageKit({
         publicKey: "public_TGL83sxiUWGZfYFL0MMz9r7AXTw=",
         urlEndpoint: "https://ik.imagekit.io/minecopre",
@@ -8,7 +10,7 @@ $(document).ready(function () {
 
     var imageURL = imagekit.url({
         path: "/assets/header.jpg",
-        urlEndpoint: "https://ik.imagekit.io/your_imagekit_id/endpoint/",
+        urlEndpoint: urlEndpoint,
         transformation: [{
             "height": "300",
             "width": "400"
@@ -17,7 +19,7 @@ $(document).ready(function () {
 
     $(document).scroll(function () {
 
-        imageURL
+        imageURL();
 
         if ($(window).scrollTop() === 0) {
             $("#mainNav").stop().animate({
