@@ -16,10 +16,10 @@ $(document).ready(function () {
             "width": "400"
         }]
     });
+    
+    alert(imageURL)
 
     $(document).scroll(function () {
-
-        alert(imageURL)
 
         if ($(window).scrollTop() === 0) {
             $("#mainNav").stop().animate({
