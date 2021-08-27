@@ -1,6 +1,15 @@
-use ImageKit\ImageKit;
+<?php
 
-$text = $_POST['text'];
+echo __DIR__;
+
+if (is_file(__DIR__ . '/../vendor/autoload.php') && is_readable(__DIR__ . '/../vendor/autoload.php')) {
+    require_once __DIR__ . '/../vendor/autoload.php';
+} else {
+    // Fallback to legacy autoloader
+    require_once __DIR__ . '/../autoload.php';
+}
+
+use ImageKit\ImageKit;
 
 $imageKit = new ImageKit(
     "public_TGL83sxiUWGZfYFL0MMz9r7AXTw=",
@@ -9,13 +18,12 @@ $imageKit = new ImageKit(
 );
 
 $imageURL = $imageKit->url(array(
-    "path" => "/assets/header.jpg",
+    "path" => $sample_file_path,
     "transformation" => array(
         array(
             "height" => "300",
             "width" => "400",
-        )
-    )
+        ),
+    ),
 ));
-
-echo $imageURL;
+?>
