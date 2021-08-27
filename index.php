@@ -45,6 +45,7 @@
 	</head>
 	
 	<body>
+		<?php include 'imageKitIO.php';?>
 		<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
 			<div class="container px-4 px-lg-5">
 				<a class="navbar-brand" href="index.html">Photus&ampRetratus</a>

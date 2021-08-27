@@ -1,14 +1,5 @@
 $(document).ready(function () {
 
-    $.ajax({
-        method: "POST",
-        url: "imageKitIO.php",
-        data: {text: "header.jpg"}
-      })
-        .done(function( response ) {
-          alert(response);
-        });
-
     $(document).scroll(function () {
 
         if ($(window).scrollTop() === 0) {
