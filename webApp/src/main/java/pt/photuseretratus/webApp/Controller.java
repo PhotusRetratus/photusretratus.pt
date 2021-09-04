@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.*;
 public class Controller {
 
     @CrossOrigin
-    @GetMapping("/geturl")
+    @GetMapping("/imagekitio/geturl")
     public String getURL(@RequestParam(value = "path", defaultValue = "/header.jpg") String path) throws IOException {
         ImageKitIO imageKitIO = new ImageKitIO();
         return imageKitIO.getURL(path);
     }
-    
+
 }
 
 
