@@ -22,17 +22,17 @@ public class ImageKitIO {
         configuration.setPublicKey("public_TGL83sxiUWGZfYFL0MMz9r7AXTw=");
         configuration.setUrlEndpoint("https://ik.imagekit.io/minecopre");
         this.imageKit.setConfig(configuration);
-    }
+    }g
 
-    public String getURL(String path){
+    public String getURL(URLInfo urlInfo){
 
         List<Map<String, String>> transformation=new ArrayList<Map<String, String>>();
+        transformation.add(urlInfo.getTransformation());
 
         Map<String, Object> options=new HashMap<>();
-        options.put("path", path);
+        options.put("path", urlInfo.getPath());
         options.put("transformation",transformation);
 
-        System.out.println(imageKit.getUrl(options));
         return imageKit.getUrl(options);
 
     }

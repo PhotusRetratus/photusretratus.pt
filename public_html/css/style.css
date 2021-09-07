@@ -8686,7 +8686,8 @@ textarea.form-control-lg {
     border-left: 5px solid #2e4b70; } }
 
 #Projects img {
-  max-width: 100%; }
+  max-width: 100%;
+  width: 100%; }
 
 #masthead {
   /*display: flex;
@@ -8720,8 +8721,8 @@ section {
   background-size: cover; }
   #Contact span {
     font-size: 1em;
-    color: #a370f7; }
+    color: #2e4b70; }
   #Contact .card {
-    border-bottom: 3px solid #a370f7; }
+    border-bottom: 3px solid #2e4b70; }
 
 /*# sourceMappingURL=style.css.map */
