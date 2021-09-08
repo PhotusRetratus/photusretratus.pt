@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+
     $('img').map(function () {
 
         var img = $(this)
@@ -11,7 +12,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "POST",
-            url: "https://photuseretratus.pt/imagekitio/posturl",
+            url: "http://localhost/imagekitio/posturl",
             data: JSON.stringify({
                 path: img.attr("alt"),
                 transformation: transformation
@@ -60,7 +61,6 @@ $(document).ready(function () {
 
     $(window).on('load', function() {
 
-        window.scrollTo(0, 0);
         $("#loading").remove();
         $("#hiddenContent").css('visibility', 'visible');
 
