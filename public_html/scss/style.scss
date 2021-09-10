@@ -1,76 +1,67 @@
 @import "../bootstrap/scss/bootstrap";
 
-#mainNav{
-    a{
-        color:white;
-    }
-
-    button{
-        color: white;
-    }
-
-    .active{
-        border-bottom: 3px solid #2e4b70;
-        font-weight: 200;
-    }
+body{
+    position:relative;
 }
 
-#About{
+.headerDark {
+    background-color: rgb(10, 10, 10)
+}
+
+#mainNav {
+    
+    .active {
+        border-bottom: 3px solid #2e4b70 !important;
+        font-weight: 200;
+    }
+
+}
+
+#About {
     @media (min-width:992px) {
-        #textCol{
+        #textCol {
             border-left: 5px solid #2e4b70;
         }
     }
-    
+
 }
 
-#Projects{
-    img{
+#Projects {
+    img {
         max-width: 100%;
         width: 100%;
     }
 }
 
 #masthead {
-    /*display: flex;
-    position: relative;
-    width: 100%;
-    height: auto;
-    min-height: 35rem;
-    padding: 15rem 0;
-    background: url("../assets/header.jpg"); //linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%, #000 100%), url("../assets/header.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: 100%;
-    */
-    img{
+
+    img {
         max-width: 100%;
     }
-    
-  }
 
-  section{
-      padding: 3rem;
-  }
+}
 
-  #Contact{
+section {
+    padding: 3rem;
+}
+
+#Contact {
     position: relative;
     width: 100%;
     height: auto;
     min-height: 35rem;
-    padding: 15rem 0;//linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%, #000 100%), url("../assets/header.jpg");
+    padding: 15rem 0; //linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%, #000 100%), url("../assets/header.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
-   
-    span{
+
+    span {
         font-size: 1em;
         color: #2e4b70;
     }
 
-    .card{
+    .card {
         border-bottom: 3px solid #2e4b70;
     }
-  }
+}

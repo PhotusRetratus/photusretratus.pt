@@ -1,3 +1,9 @@
+/*!
+ * Bootstrap v5.1.0 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -8667,12 +8673,14 @@ textarea.form-control-lg {
 
   .d-print-none {
     display: none !important; } }
-#mainNav a {
-  color: white; }
-#mainNav button {
-  color: white; }
+body {
+  position: relative; }
+
+.headerDark {
+  background-color: #0a0a0a; }
+
 #mainNav .active {
-  border-bottom: 3px solid #2e4b70;
+  border-bottom: 3px solid #2e4b70 !important;
   font-weight: 200; }
 
 @media (min-width: 992px) {
@@ -8683,21 +8691,8 @@ textarea.form-control-lg {
   max-width: 100%;
   width: 100%; }
 
-#masthead {
-  /*display: flex;
-  position: relative;
-  width: 100%;
-  height: auto;
-  min-height: 35rem;
-  padding: 15rem 0;
-  background: url("../assets/header.jpg"); //linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%, #000 100%), url("../assets/header.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: 100%;
-  */ }
-  #masthead img {
-    max-width: 100%; }
+#masthead img {
+  max-width: 100%; }
 
 section {
   padding: 3rem; }

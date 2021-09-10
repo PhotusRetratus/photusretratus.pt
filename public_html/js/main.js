@@ -1,5 +1,33 @@
 $(document).ready(function () {
 
+    function changeNavColor() {
+
+        if ($(window).scrollTop() === 0) {
+
+            /*$("#mainNav").stop().animate({
+                backgroundColor: 'transparent',
+            })
+            $("#mainNav").find('a').stop().animate({
+                color: 'white',
+            })*/
+            $('#mainNav').addClass('navbar-dark');
+            $('#mainNav').addClass('headerDark');
+            $('#mainNav').removeClass('navbar-light');
+            $('#mainNav').removeClass('bg-white');
+        } else {
+            /*$("#mainNav").stop().animate({
+                backgroundColor: 'white',
+            })
+            $("#mainNav").find('a').stop().animate({
+                color: 'black',
+            })*/
+            $('#mainNav').addClass('navbar-light');
+            $('#mainNav').addClass('bg-white');
+            $('#mainNav').removeClass('navbar-dark');
+            $('#mainNav').removeClass('headerDark');
+        }
+
+    }
 
     $('img').map(function () {
 
@@ -19,51 +47,32 @@ $(document).ready(function () {
             }),
             contentType: "application/json",
         }).done(function (data) {
-            if(img.hasClass("backgroundImage")){
-                img.parent().css("background-image","url(" + data +')')
+            if (img.hasClass("backgroundImage")) {
+                img.parent().css("background-image", "url(" + data + ')')
                 img.remove();
-            }
-            else{
+            } else {
                 img.attr("src", data)
             }
-            img.width("100%")   
+            img.width("100%")
         })
 
     })
 
+    changeNavColor();
 
     $(document).scroll(function () {
-
-        if ($(window).scrollTop() === 0) {
-
-            $("#mainNav").stop().animate({
-                backgroundColor: 'transparent',
-            })
-            $("#mainNav").find('a').stop().animate({
-                color: 'white',
-            })
-            $('.navbar-toggler').addClass('navbar-dark');
-            $('.navbar-toggler').removeClass('navbar-light');
-        } else {
-            $("#mainNav").stop().animate({
-                backgroundColor: 'white',
-            })
-            $("#mainNav").find('a').stop().animate({
-                color: 'black',
-            })
-            $('.navbar-toggler').addClass('navbar-light');
-            $('.navbar-toggler').removeClass('navbar-dark');
-        }
+        changeNavColor();
     })
-
+   
     new bootstrap.ScrollSpy(document.body, {
-        target: '#mainNav'
-    })
-
+        target: '#mainNav',
+        offset: 7
+    });
+    
 })
 
-$(window).bind('load', function(){
+$(window).bind('load', function () {
     $("#loading").remove();
     $("#hiddenContent").css('visibility', 'visible');
+});
 
-})
