@@ -8,11 +8,12 @@ import io.imagekit.sdk.utils.Utils;
 
 import java.io.IOException;
 
+
 @SpringBootApplication
 public class WebAppApplication {
+    public static void main(String[] args) throws IOException {
 
-	public static void main(String[] args) throws IOException {
-		SpringApplication.run(WebAppApplication.class, args);
+        SpringApplication.run(WebAppApplication.class, args);
 
-	}
+    }
 }

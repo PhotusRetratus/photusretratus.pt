@@ -14,13 +14,21 @@ repositories {
 }
 
 dependencies {
+	implementation 'com.github.imagekit-developer:imagekit-java:1.0.3'
 	implementation 'com.squareup.okhttp3:okhttp:4.9.0'
 	implementation 'com.google.code.gson:gson:2.8.8'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	implementation 'com.github.imagekit-developer:imagekit-java:1.0.3'
 }
 
-test {
-	useJUnitPlatform()
+bootJar{
+	rootSpec.filesMatching('**/*.jar', { jar ->
+		// only rename jars which are going into the lib dir into the fat jar
+		if (jar.path.startsWith("BOOT-INF/lib")) {
+			String groupId = jar.file.parentFile.parentFile.parentFile.parentFile.name
+			jar.name = "$groupId-${jar.name}"
+		}
+	})
+
+	duplicatesStrategy(DuplicatesStrategy.FAIL)
 }
