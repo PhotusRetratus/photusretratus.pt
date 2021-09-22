@@ -4,7 +4,6 @@
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
-/webApp/!gradle/wrapper/gradle-wrapper.jar
 /webApp/!**/src/main/**/build/
 /webApp/!**/src/test/**/build/
 /webApp/BOOT-INF

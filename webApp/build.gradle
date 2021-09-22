@@ -40,4 +40,3 @@ tasks.named('jar') {
 	}
 }
 
-
