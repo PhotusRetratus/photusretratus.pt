@@ -74,6 +74,34 @@ function getIndexImagesUrl() {
     })
 }
 
+function getPortfolioImageUrl(div) {
+
+    $("#Topics").find('img').map(function () {
+        var img = $(this)
+
+        var transformationMap = new Map()
+
+        transformationMap.set("width", img.parent().width())
+
+        img.attr("width", img.parent().width())
+        const transformation = Object.fromEntries(transformationMap);
+        let json = JSON.stringify({
+            name: img.attr("name"),
+            path: img.attr("path"),
+            transformation: transformation
+        })
+
+        postAJAX(
+            "getUrl",
+            json,
+        ).promise().done(function (data) {
+            img.attr("src", data)
+        })
+    })
+
+
+}
+
 function generatePortfolioSection() {
 
     postAJAX(
@@ -89,9 +117,11 @@ function generatePortfolioSection() {
                 '<h2 class="position-absolute top-50 start-50 translate-middle card-title">' + data[i] + '</h2>' +
                 '</div>' +
                 '</div>' +
-                '</div>')
+                '</div>'
+            )
         })
-        getIndexImagesUrl();
+
+        getPortfolioImageUrl($("#" + data));
     })
 
 }
@@ -99,7 +129,7 @@ function generatePortfolioSection() {
 function indexLoading() {
 
     //generatePortfolioSection()
-
+    getIndexImagesUrl();
     changeNavColor();
 
     new bootstrap.ScrollSpy(document.body, {
@@ -116,7 +146,7 @@ $(document).scroll(function () {
 
 
 $(document).ready(function () {
-    
+
     indexLoading()
 
     var myModal = new bootstrap.Modal(document.getElementById('Modal'), {})
