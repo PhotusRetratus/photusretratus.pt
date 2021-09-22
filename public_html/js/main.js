@@ -2,7 +2,7 @@ function postAJAX(urls, datas) {
 
     return $.ajax({
         type: "POST",
-        url: "http://photuseretratus.pt/imagekitio/" + urls,
+        url: "https://photuseretratus.pt/imagekitio/" + urls,
         data: datas,
         contentType: "application/json",
     })
